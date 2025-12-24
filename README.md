@@ -12,12 +12,12 @@ This project demonstrates my ability to design scalable interfaces, implement re
 <img width="1450" height="925" alt="Screenshot of HiteJinro desktop view" src="https://github.com/user-attachments/assets/5baa5e8e-5f69-4387-b992-a3f44ef8053b" />
 
 ### Mobile View  
-*(will be uploaded soon)*
+(will be uploaded soon)
 
 <br>
 
-▶︎ **Live Demo:** *(link to be added)*  
-▶︎ **Original Site:** https://m.hitejinro.com/
+▶︎ **Live Demo: https://hyeminc0706.github.io/Inspired_Project/  
+▶︎ **Original Site: https://m.hitejinro.com/
 
 ---
 
