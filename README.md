@@ -1,14 +1,9 @@
-
----
-
-## 📄 Project2: HiteJinro Inspired
-
-```markdown
 # HiteJinro Inspired Project
 
 ## Overview
 A desktop-only clone project inspired by the HiteJinro website.  
-Implemented with HTML, CSS, and JavaScript to practice layout and UI/UX design.  
+Implemented with HTML, CSS, and JavaScript to practice layout and UI/UX design. 
+
 
 ## Screenshots
 ### Desktop View
@@ -35,4 +30,4 @@ UI/UX design and frontend development (100%)
 ```bash
 git clone https://github.com/hyeminc0706/Inspired_Project.git
 cd Inspired_Project
-open index.html```
+open index.html
