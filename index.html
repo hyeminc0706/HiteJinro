@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/subtitle.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/brand.css">
     <link rel="stylesheet" href="css/hiddenmenu.css">
@@ -552,29 +553,30 @@
    <script type="text/javascript" src="slick/slick.min.js"></script>
 
    <script>
-    $(document).ready(function(){
-        $('.titleani').slick({
-            dots:true,
-            arrows: true,
-            infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: false,
-            speed:1000,
-            fade: false
-        });
-        $('.snsani').slick({
-            dots:true,
-            infinite: true,
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            autoplay: true,
-            autoplaySpeed: 1000,
-            speed:3000
+        $(document).ready(function(){
+            $('.titleani').slick({
+                dots:true,
+                arrows: true,
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: false,
+                speed:1000,
+                fade: false
+                
+            });
+            $('.snsani').slick({
+                dots:true,
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                autoplay: true,
+                autoplaySpeed: 1000,
+                speed:3000
 
+            });
         });
-    });
-</script>
+    </script>
    <!-- 메인영역 -->
    <main>
         <section id="product">
