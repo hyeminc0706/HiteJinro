@@ -532,16 +532,16 @@
    <!-- 타이틀영역 -->
    <div id="subtitle" class="">
         <div class="titleani height-full flex flex-center flex-column flex-align-center">
-            <img src="img/i1.png" alt="켈리 포스터">
-            <img src="img/i2.png" alt="테라 포스터">
-            <img src="img/i3.png" alt="참이슬 포스터">
-            <img src="img/i4.png" alt="진로 포스터">
-            <img src="img/i5.png" alt="필라이트 포스터">
-            <img src="img/i6.png" alt="일품진로 OAK43 포스터">
-            <img src="img/i7.png" alt="일품진로 포스터">
-            <img src="img/i8.jpg" alt="진로1924 포스터">
-            <img src="img/i9.png" alt="매화수 포스터">
-            <img src="img/i10.png" alt="에스라이트 포스터">
+            <img src="img/i1.png" alt="켈리 포스터" data-prev="S LIGHT" data-next="TERRA">
+            <img src="img/i2.png" alt="테라 포스터" data-prev="KELLY" data-next="FRESH">
+            <img src="img/i3.png" alt="참이슬 포스터" data-prev="TERRA" data-next="JINRO">
+            <img src="img/i4.png" alt="진로 포스터" data-prev="FRESH" data-next="FILITE">
+            <img src="img/i5.png" alt="필라이트 포스터" data-prev="JINRO" data-next="OAK43">
+            <img src="img/i6.png" alt="일품진로 OAK43 포스터" data-prev="FILITE" data-next="99YR">
+            <img src="img/i7.png" alt="일품진로 포스터" data-prev="OAK43" data-next="JINRO1924">
+            <img src="img/i8.jpg" alt="진로1924 포스터" data-prev="99YR" data-next="MAEHWASU">
+            <img src="img/i9.png" alt="매화수 포스터" data-prev="JINRO1924" data-next="S LIGHT">
+            <img src="img/i10.png" alt="에스라이트 포스터" data-prev="MAEHWASU" data-next="KELLY">
         </div>
    </div>
    <!--슬릭-->
@@ -559,6 +559,31 @@
                 fade: false
                 
             });
+                // slick 초기화 후, 버튼 텍스트를 강제로 한 번 세팅 (Next, Previous 등 기본 텍스트 제거)
+                setTimeout(function() {
+                    var slick = $('.titleani').slick('getSlick');
+                    var $current = $(slick.$slides[0]);
+                    var prevText = $current.attr('data-prev') || '';
+                    var nextText = $current.attr('data-next') || '';
+                    $('.titleani .slick-prev').text(prevText);
+                    $('.titleani .slick-next').text(nextText);
+                }, 0);
+                // 슬라이드 버튼 텍스트 동적 변경
+                function updateSlickButtonText(slick, currentSlide) {
+                    var i = (typeof currentSlide === 'undefined') ? 0 : currentSlide;
+                    var $current = $(slick.$slides[i]);
+                    var prevText = $current.attr('data-prev') || '';
+                    var nextText = $current.attr('data-next') || '';
+                    $('.titleani .slick-prev').text(prevText);
+                    $('.titleani .slick-next').text(nextText);
+                }
+                $('.titleani').on('init reInit afterChange', function(event, slick, currentSlide){
+                    updateSlickButtonText(slick, currentSlide);
+                });
+                // slick 초기화 후 첫 슬라이드에 맞게 버튼 텍스트 세팅
+                $('.titleani').on('init', function(event, slick){
+                    updateSlickButtonText(slick, 0);
+                });
             $('.snsani').slick({
                 dots:true,
                 infinite: true,
@@ -569,7 +594,7 @@
                 speed:3000
 
             });
-        });
+        });        
     </script>
    <!-- 메인영역 -->
    <main>
