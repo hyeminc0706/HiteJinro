@@ -63,20 +63,6 @@
     opacity: .25;
 }
 
-.titleani .slick-prev:before,
-.titleani .slick-next:before
-{
-   content: 'kelly';
-   font-size
-;
-   font-size: 14px;
-   height: 20px;
-   display: block;
-   color: #000000ab;
-   width: 90px;
-   border-color: #fff;
-   line-height: 1.5;
-}
 
 .slick-prev
 {
@@ -86,14 +72,6 @@
 {
     right: -25px;
     left: auto;
-}
-.titleani .slick-prev:before
-{
-    content: '하이트';
-}
-[dir='rtl'] .titleani .slick-prev:before
-{
-    content: '하이트';
 }
 
 .slick-next
@@ -105,19 +83,29 @@
     left: -25px;
     right: auto;
 }
-.titleani .slick-next:before
-{
-    content: 'TERRA';
-    position: absolute;
-    right: 55px;
-    line-height: 0;
-}
-[dir='rtl'] .slick-next:before
-{
-    content: '테라';
-}
 
 /* titleani Dots */
+.titleani .slick-prev,
+.titleani .slick-next {
+    color: transparent !important;
+    font-size: 16px;
+    background: #e0e7ef;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.85;
+    border: none;
+    transition: color 0.2s, background 0.2s;
+}
+.titleani .slick-prev:hover,
+.titleani .slick-next:hover {
+    color: #222 !important;
+    background: #cfd8e3;
+    opacity: 1;
+}
 .titleani .slick-dotted.slick-slider
 {
     margin-bottom: 30px;
