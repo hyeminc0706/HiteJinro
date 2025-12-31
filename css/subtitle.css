@@ -8,9 +8,7 @@ div#subtitle .titleani {
 div#subtitle .slick-arrow{
   overflow: hidden;
   position: absolute;
-  width: 55px;
-  height: 55px;
-  border-radius: 27px;
+  /* width, height, border-radius 등은 slick-theme.css에서 관리 */
 }
 div#subtitle .slick-prev{
   left: 7.5%;
@@ -20,11 +18,12 @@ div#subtitle .slick-prev{
 }
 div#subtitle .titleani .slick-arrow:hover{
   width: 144.4px;
-  transition: width .3s ease, background-position .3s ease; 
+  transition: width .3s ease, background-position .3s ease;
+  border-radius: 60px;
 }
 div#subtitle .slick-next{
   right: 12.5%;
-  padding-right: 55px;
+  padding-right: 45px;
   background: rgba(255,255,255,0.5) url(../img/next.png) no-repeat 24px 50%;
 }
 div#subtitle .slick-next:hover{
