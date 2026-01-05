@@ -1,5 +1,5 @@
 # 🍻 HiteJinro
-### **UI/UX Redesign & Frontend Implementation (Personal Practice Project)**
+### **UI/UX Redesign & Frontend Implementation**
 
 A desktop‑focused redesign practice project inspired by the HiteJinro website.  
 I analyzed the original site’s information structure and visual flow, then rebuilt the entire page with a clearer layout and more intuitive interactions.  
